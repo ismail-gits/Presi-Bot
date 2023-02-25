@@ -1,0 +1,39 @@
+version: "3.1"
+
+intents:
+  - greet
+  - leave
+  - short_leave
+  - attendance_regularization
+  - leave_balance
+  - bot_challenge
+  - end_conversation
+
+actions:
+  - action_rephrase
+
+responses:
+  utter_greet:
+  - text: Hey!! How can I help you ?
+
+  utter_leave:
+  - text: "Steps to apply: Login to Hrone application > Request > New request > Leave > Double click on the date > Click on types of leaves > Comments > Submit"
+
+  utter_short_leave:
+  - text: "Steps to apply for Short Leave: Login to Hrone application > Request > New request > Short Leave > Click on the date > Mention start hours start minutes & end hours end minutes in 24 hours format > Comments > Submit"
+
+  utter_attendance_regularization:
+  - text: "Steps to request Attendance Regularization: Login to Hrone application > Request > New request > Attendance regularization request> Click on the date >Mention start hours start minutes & end hours end minutes in 24 hours format > Comments > Submit"
+
+  utter_leave_balance:
+  - text: "Steps to view Leave Balance: Login to Hrone application > Profile > Leave Balance"
+
+  utter_bot_challenge:
+  - text: Im a Bot and I help Presidency University teachers with their queries.
+
+  utter_end_conversation:
+  - text: Hope this solves your query. Thanks for using!!
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

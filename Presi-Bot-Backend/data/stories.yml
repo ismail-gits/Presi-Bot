@@ -1,0 +1,42 @@
+version: "3.1"
+
+stories:
+- story: greeting
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: apply_leave
+  steps:
+    - intent: leave
+    - action: utter_leave
+
+- story: apply_short_leave
+  steps:
+    - intent: short_leave
+    - action: utter_short_leave
+
+- story: rectify_attendance_regularization
+  steps:
+    - intent: attendance_regularization
+    - action: utter_attendance_regularization
+
+- story: view_leave_balance
+  steps:
+    - intent: leave_balance
+    - action: utter_leave_balance
+
+- story: challenging_bot
+  steps:
+    - intent: bot_challenge
+    - action: utter_bot_challenge
+
+- story: end_conversation
+  steps:
+    - intent: end_conversation
+    - action: utter_end_conversation
+
+- story: rephrase
+  steps:
+    - intent: unknown
+    - action: action_rephrase

@@ -1,0 +1,146 @@
+version: "3.1"
+
+nlu:
+# Greeting
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+# Leave or PL or CL or AAL or OD
+- intent: leave
+  examples: |
+    - How to apply leave?
+    - How to apply CL?
+    - How to apply PL?
+    - How to apply AAL?
+    - How to apply OD?
+    - How to apply casual leave?
+    - How to apply paid leave?
+    - How to apply privilege leave?
+    - How to apply annual leave?
+    - How to apply onduty?
+    - How to apply on-duty?
+    - How to make a request for leave ?
+    - How to make a request CL ?
+    - How to make a request PL ?
+    - How to make a request AAL ?
+    - How to make a request OD ?
+    - leave ?
+    - CL ?
+    - PL ?
+    - AAL ?
+    - OD ?
+    - Casual Leave ?
+    - Paid leave ?
+    - privilege leave ?
+    - annual leave ?
+    - onduty or on-duty or On Duty ?
+    - Procedure to apply leave?
+    - Procedure to apply CL?
+    - Procedure to apply PL?
+    - Procedure to apply AAL?
+    - Procedure to apply OD?
+    - Where to apply leave?
+    - Where to apply CL?
+    - Where to apply PL?
+    - Where to apply AAL?
+    - Where to apply OD?
+    - How can I apply leave?
+    - How can I apply CL?
+    - How can I apply PL?
+    - How can I apply AAL?
+    - How can I apply OD?
+    - I want leave?
+    - I want CL?
+    - I want PL?
+    - I want AAL?
+    - I want OD?
+    - Steps to apply leave?
+    - Steps to apply CL?
+    - Steps to apply PL?
+    - Steps to apply AAL?
+    - Steps to apply OD?
+
+# Short leave
+- intent: short_leave
+  examples: |
+    - How to apply short leave?
+    - How to apply SL?
+    - short leave ?
+    - SL ?
+    - Procedure to apply short leave ?
+    - Procedure to apply SL ?
+    - Where to apply short leave?
+    - Where to apply SL?
+    - How can I apply short leave?
+    - How can I apply SL?
+    - I want short leave?
+    - I want SL?
+    - Steps to apply short leave?
+    - Steps to apply SL?
+
+# Attendance Regularization
+- intent: attendance_regularization
+  examples: |
+    - How to apply for attendance regularization ?
+    - How to do attendance regularization ?
+    - How can I do attendance regularization ?
+    - How can I correct or rectify my attendance ?
+    - There is a mistake in my attendance entries, how can I correct or rectify it ?
+    - How to raise a request to correct or rectify my attendance ?
+    - How to correct or rectify mistake in my attendance ?
+    - I want correct or rectify mistake in my attendance ?
+    - Where can I correct or rectify my attendance ?
+    - Steps to correct or rectify my attendance ?
+
+# Leave balance
+- intent: leave_balance
+  examples: |
+    - How to know leave balance ?
+    - I want to know leave balance ?
+    - Where can I know my leave balance ?
+    - Where to see my leave balance ?
+    - leave balance ?
+    - How much leave balance I have ?
+    - Steps to know leave balance ?
+
+# Bot challenge
+- intent: bot_challenge
+  examples: |
+    - who are you?
+    - are you a bot?
+    - tell me about yourself
+    - introduce yourself
+    - what can you do?
+    - how can you help me?
+    - are you human?
+
+# Ending conversation
+- intent: end_conversation
+  examples: |
+    - thanks
+    - bye
+    - thanks for the help
+    - take care
+    - thanks for helping
+    - goodbye
+    - see you
+    - thank you
+    - see you next time
+    - I got it
+    - I understood
+    - this was helpful
+    - see you later
+    - ok done
