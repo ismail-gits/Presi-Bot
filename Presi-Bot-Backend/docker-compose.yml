@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+  rasa:
+    image: rasa-bot:latest
+    build: './'
+    volumes: 
+      - ./data: /app/data
+      - ./actions: /app/actions
+      - ./tests: /app/tests
+    command: bash -c "rm -rf .rasa/* && rasa train && rasa run --enable-api --cors \"*\""
+    working_dir: /app
+    ports:
+      - '5006:5005'
+    # public: true  # Use this if you are using okteto
+    networks:
+      - all
+       
+  rasa-actions:
+    image: rasa-bot:latest
+    build: './'
+    volumes: 
+      - ./actions: /app/actions
+    command: bash -c "rasa run actions"
+    working_dir: /app
+    ports:
+      - '5055:5055'
+    networks:
+      - all
+
+networks:
+  all:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable.ipv6: "true"
